@@ -9,27 +9,27 @@ const url = 'https://app.ticketmaster.com/discovery/v2/events.json?countryCode=U
 
 const TicketMaster = () => {
 
-    const eventFetch =() => {
-        fetch(`${url}`)
-        .then(res=> {
-            if (res.status !== 200){
-                throw new Error('Unable to retrieve events')
-            } else return res.json()
-        })
-        .then(json => {
-            if (json.results.length === 0){
-                throw new Error ('No events available')
-            } else {
-                console.log(json.results);
-            }
-        })
-    }
+    // const eventFetch =() => {
+    //     fetch(`${url}`)
+    //     .then(res=> {
+    //         if (res.status !== 200){
+    //             throw new Error('Unable to retrieve events')
+    //         } else return res.json()
+    //     })
+    //     .then(json => {
+    //         if (json.results.length === 0){
+    //             throw new Error ('No events available')
+    //         } else {
+    //             console.log(json.results);
+    //         }
+    //     })
+    // }
 
 
     return (
         <div className="main">
 <div className="mainDiv">
-    <button onClick={eventFetch}>Click to find events in your area</button>
+    {/* <button onClick={eventFetch}>Click to find events in your area</button> */}
 </div>
         </div>
     );
