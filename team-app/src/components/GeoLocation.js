@@ -8,7 +8,7 @@ const GeoLocation = () => {
     const [lng, setLng] = useState(null)
     const [status, setStatus] = useState(null)
     
-    const geoPoint = Geohash.encode(lat, lng)
+    const geoPoint = Geohash.encode(lat, lng, [9])
 
     const getLocation = () => {
         if (!navigator.geolocation) {
