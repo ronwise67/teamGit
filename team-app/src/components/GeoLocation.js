@@ -7,8 +7,6 @@ const GeoLocation = () => {
     const [lng, setLng] = useState(null)
     const [status, setStatus] = useState(null)
 
-    const geohash = Geohash.encode(52.20, 0.12, 6)
-
     const getLocation = () => {
         if (!navigator.geolocation) {
             setStatus('Geolocation is not supported by your browser');
@@ -22,8 +20,10 @@ const GeoLocation = () => {
                 setStatus('Unable to retrieve your location');
             });
         }
-        console.log(geohash);
     }
+
+    
+    
 
     return (
         <div>
@@ -32,7 +32,7 @@ const GeoLocation = () => {
             <p>{status}</p>
             {lat && <p>Latitude: {lat}</p>}
             {lng && <p>Longitude: {lng}</p>}
-            {geohash}
+            {/* {geoPoint} */}
         </div>
     )
 }

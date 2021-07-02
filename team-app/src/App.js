@@ -5,13 +5,13 @@ import Sitebar from './components/Sitebar'
 
 function App() {
   return (
-    <>
+    <div>
 
       <Sitebar />
       <GeoLocation />
 
+</div>      
 
-    </>
   );
 }
 
