@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
 import Geohash from 'latlon-geohash'
 
-const GeoLocation = () => {
 
+const GeoLocation = () => {
+    
     const [lat, setLat] = useState(null)
     const [lng, setLng] = useState(null)
     const [status, setStatus] = useState(null)
+    
+    const geoPoint = Geohash.encode(lat, lng)
 
     const getLocation = () => {
         if (!navigator.geolocation) {
@@ -22,9 +25,6 @@ const GeoLocation = () => {
         }
     }
 
-    
-    
-
     return (
         <div>
             <button onClick={getLocation}>Get Location</button>
@@ -32,7 +32,7 @@ const GeoLocation = () => {
             <p>{status}</p>
             {lat && <p>Latitude: {lat}</p>}
             {lng && <p>Longitude: {lng}</p>}
-            {/* {geoPoint} */}
+            {geoPoint}
         </div>
     )
 }
