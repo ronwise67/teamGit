@@ -8,7 +8,7 @@ import Geohash from 'latlon-geohash'
 let geoPoint
 
 //geo specific but getting errors on the fetch
-const customUrl = `https://app.ticketmaster.com/discovery/v2/events/.json?&source=ticketmaster&geopoint=${geoPoint}&apikey=Ep9KcAms4qdlsc2yjWmcMEs1AtOQLrKJ`
+const customUrl = 'https://app.ticketmaster.com/discovery/v2/venues.json?lat=40.060034883696844long=-86.06601094446212&apikey=Ep9KcAms4qdlsc2yjWmcMEs1AtOQLrKJ'
 
 
 //this fetches successfully but doesn't make events geo specific
