@@ -7,9 +7,12 @@ import Geohash from 'latlon-geohash'
 
 let geoPoint
 
-const customUrl = `https://app.ticketmaster.com/discovery/v2/events/.json?geopoint=${geoPoint}&apikey=Ep9KcAms4qdlsc2yjWmcMEs1AtOQLrKJ`
+//geo specific but getting errors on the fetch
+const customUrl = `https://app.ticketmaster.com/discovery/v2/events/.json?&source=ticketmaster&geopoint=${geoPoint}&apikey=Ep9KcAms4qdlsc2yjWmcMEs1AtOQLrKJ`
 
-const url = "https://app.ticketmaster.com/discovery/v2/events/.json?&apikey=Ep9KcAms4qdlsc2yjWmcMEs1AtOQLrKJ"
+
+//this fetches successfully but doesn't make events geo specific
+const url=`https://app.ticketmaster.com/discovery/v2/events.json?&source=ticketmaster&apikey=Ep9KcAms4qdlsc2yjWmcMEs1AtOQLrKJ`
 
 
 const GeoLocation2 = () => {
@@ -47,12 +50,12 @@ const GeoLocation2 = () => {
     )
 }
 
- const TicketMaster = () => {
+const TicketMaster = () => {
 
-    const getEvents = fetch(`${url}`)
-    await.then(res => res.json())
+    const getEvents = fetch(customUrl)
+        .then(res => res.json())
         .then(json => {
-            console.log(json);
+            console.log(json._embedded.events);
         })
 
     return (
@@ -63,6 +66,6 @@ const GeoLocation2 = () => {
         </div>
     );
 }
-TicketMaster()
+// TicketMaster()
 
 export default TicketMaster;
