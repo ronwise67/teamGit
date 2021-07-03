@@ -3,7 +3,7 @@ import Weather from './Weather'
 import Nasa from './Nasa'
 import TicketMaster from './TicketMaster'
 
-const Sitebar = (props) => {
+const Sitebar = () => {
     return (
         <div>
             <Weather />
