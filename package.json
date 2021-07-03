@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "esm": "^3.2.25",
+    "latlon-geohash": "^2.0.0"
+  }
+}
