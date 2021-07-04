@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Geohash from 'latlon-geohash'
+// import Geohash from 'latlon-geohash' 
+
 
 let geoPoint
 
@@ -41,3 +42,5 @@ const GeoLocation2 = () => {
         </div>
     )
 }
+
+export default Nasa
