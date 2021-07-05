@@ -15,7 +15,7 @@ const Sitebar = () => {
                 <ul className='sidebar-list list-unstyled'>
                     <li><Link to='/nasa'>Nasa</Link></li>
                     <li><Link to="/ticket">Ticket Master</Link></li>
-                    <li><Link to="/weather">Weather App</Link></li>
+                    <li><Link to="/weather">Weather</Link></li>
                 </ul>
             </div>
             <div className='sidebar-route'>
