@@ -8,7 +8,7 @@ const Weather = (props) => {
         <div className="main">
             <div className="mainDiv">
               <WeekContainer /><br/>
-              sss
+              
             </div>
         </div>
     );
