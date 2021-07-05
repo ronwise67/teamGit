@@ -65,4 +65,4 @@ const GeoLocation2 = () => {
 }
 TicketMaster()
 
-export default TicketMaster;
+// export default TicketMaster;

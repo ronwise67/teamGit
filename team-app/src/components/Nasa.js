@@ -8,7 +8,7 @@ let geoPoint
 const customUrl = 'https://api.nasa.gov/planetary/earth/imagery'
 const apikey = '?api_key=dhF4ppenEtceoXUkXMLBwmu70YvfJAkAZCrIRk6n'
 
-const GeoLocation2 = () => {
+const GeoLocation = () => {
 
     const geoPoint = Geohash.encode(lat, lng, [9])
 
@@ -23,8 +23,9 @@ const GeoLocation2 = () => {
             setStatus('Initializing missile target...');
             navigator.geolocation.getCurrentPosition((position) => {
                 setStatus(null);
-                setLat(position.coords.latitude);
-                setLng(position.coords.longitude);
+                setLat(position.coords.latitude).round();
+                setLng(position.coords.longitude).round();
+                
             }, () => {
                 setStatus('Unable to retrieve your location');
             });

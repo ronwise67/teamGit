@@ -1,7 +1,8 @@
 import './App.css';
 // import GeoLocation from './components/GeoLocation'
 // import Sitebar from './components/Sitebar'
-import TicketMaster from './components/TicketMaster'
+// import TicketMaster from './components/TicketMaster'
+import Nasa from './components/Nasa'
 
 
 function App() {
@@ -10,7 +11,9 @@ function App() {
 
       {/* <Sitebar /> */}
       {/* <GeoLocation /> */}
-      <TicketMaster />
+      {/* <TicketMaster /> */}
+      <Nasa />
+
 
 </div>      
 
