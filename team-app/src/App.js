@@ -1,22 +1,33 @@
+import React from 'react'
+import 'bootstrap/dist/css/bootstrap.css'
 import './App.css';
+
+
 // import GeoLocation from './components/GeoLocation'
-// import Sitebar from './components/Sitebar'
-// import TicketMaster from './components/TicketMaster'
-import Nasa from './components/Nasa'
-
-
-function App() {
-  return (
-    <div>
+//import TicketMaster from './components/TicketMaster'
 
       {/* <Sitebar /> */}
       {/* <GeoLocation /> */}
       {/* <TicketMaster /> */}
       <Nasa />
 
+import Sidebar from './components/site/Sidebar';
+import Header from './components/site/Header';
+import Footer from './components/site/Footer';
 
-</div>      
+import {
+  BrowserRouter as Router
+} from 'react-router-dom'
 
+function App() {
+  return (
+    <div className="App">
+     <Header />
+     <Router>
+       <Sidebar />
+     </Router>
+     <Footer />
+    </div>
   );
 }
 
