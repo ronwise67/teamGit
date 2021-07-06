@@ -68,4 +68,4 @@ const TicketMaster = () => {
 }
 // TicketMaster()
 
-// export default TicketMaster;
+export default TicketMaster;

@@ -2,14 +2,9 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import './App.css';
 
-
-// import GeoLocation from './components/GeoLocation'
-//import TicketMaster from './components/TicketMaster'
-
-      {/* <Sitebar /> */}
-      {/* <GeoLocation /> */}
-      {/* <TicketMaster /> */}
-      <Nasa />
+import GeoLocation from './components/GeoLocation'
+import TicketMaster from './components/TicketMaster'
+import Nasa from './components/Nasa';
 
 import Sidebar from './components/site/Sidebar';
 import Header from './components/site/Header';
