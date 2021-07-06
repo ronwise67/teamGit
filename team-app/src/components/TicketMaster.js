@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import {
     Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button, CardDeck
+    CardTitle, CardSubtitle, CardDeck
 } from 'reactstrap'
-
-// const key = "Ep9KcAms4qdlsc2yjWmcMEs1AtOQLrKJ"
-// const secret = "FYePGGoK9mq0OEEe"
 
 //geo specific but getting errors on the fetch
 const customUrl = 'https://app.ticketmaster.com/discovery/v2/venues.json?&apikey=Ep9KcAms4qdlsc2yjWmcMEs1AtOQLrKJ&latlong="${latLng}'
@@ -15,7 +12,7 @@ const customUrl = 'https://app.ticketmaster.com/discovery/v2/venues.json?&apikey
 
 const url = `https://app.ticketmaster.com/discovery/v2/events?apikey=Ep9KcAms4qdlsc2yjWmcMEs1AtOQLrKJ`
 
-const TicketMaster = (props) => {
+const TicketMaster = () => {
 
     const [eventData, setEventData] = useState([])
     const [eventName, setEventName] = useState("")
