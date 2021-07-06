@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
-// import Geohash from 'latlon-geohash' 
+import Geohash from 'latlon-geohash' 
+import {BrowserRouter, Route} from "react-router-dom"
+import Home from "./site/Home"
+import NasaPhoto from "./NasaPhoto"
+import {Link} from "react-router-dom" 
 
 
 let geoPoint
 
-//geo specific but getting errors on the fetch
 const customUrl = 'https://api.nasa.gov/planetary/earth/imagery'
 const apikey = '?api_key=dhF4ppenEtceoXUkXMLBwmu70YvfJAkAZCrIRk6n'
 
@@ -25,7 +28,7 @@ const GeoLocation = () => {
                 setStatus(null);
                 setLat(position.coords.latitude).round();
                 setLng(position.coords.longitude).round();
-                
+
             }, () => {
                 setStatus('Unable to retrieve your location');
             });
@@ -42,6 +45,29 @@ const GeoLocation = () => {
             {geoPoint}
         </div>
     )
+}
+
+const Nasa = () => {
+
+    const getEvents = fetch(customUrl)
+        .then(res => res.blob())
+        .then(blob => {
+            // console.log(json._embedded.events)
+        })
+
+    return (
+        <div className="main">
+            <div className="mainDiv">
+                <button onClick={getEvents}>Click to see a satellite photo of your location</button>
+            </div>
+            <BrowserRouter>
+            <div>
+                <Route component={NasaPhoto} path="/nasaphoto" />
+            </div>
+        </BrowserRouter>
+        </div>
+
+    );
 }
 
 export default Nasa
