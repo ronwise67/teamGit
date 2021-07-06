@@ -1,6 +1,13 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import './App.css';
+<<<<<<< HEAD
+// import GeoLocation from './components/GeoLocation'
+// import Sitebar from './components/Sitebar'
+import TicketMaster from './components/TicketMaster'
+import reactstrap from 'reactstrap'
+=======
+>>>>>>> 16e98d7152baa8121fae9385c129fb8ee26ea1f6
 
 
 // import GeoLocation from './components/GeoLocation'
